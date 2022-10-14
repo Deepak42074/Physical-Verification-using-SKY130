@@ -112,6 +112,17 @@ LVS is based on principle that if we have multiple version of something derived 
 2. Checking From Dependent sources
 In the modern practice of automation where chips are designed from a single source (RTL design), the LVS process is the matter of  checking the design through different flows; one starting at the RTL source and working forwards and the other starting at the finished layout and working backwards.
 
+ The GDSII format :
+
+Layout file formats are:
+These formats must describe both data (rectangles, subcells, polygons) and metadata (labels, cell boundaries and instance names, etc.) regarding IC layouts. 
+
+1. Caltech Intermediate form (.cif)
+2. GDSII stream format
+3. Open Artwork System Interchange Standard (OASIS) : It is supposed to form much smalle file than GDS.
+
+The GDSII format is preferred format for mask making. In magic the commands to generate mask data include a mixture of cif and calma. The Layer:purpose pairs distinguishes GDS from other formats. Instead of describing each layer with a name such as DIFF for diffusion, it describes them as a pair of numbers, seperated by a colon (ex. 65:20). Here, one number denotes the layer (such as diffusion, metal1, poly), while the other number denotes the purpose (such as blockage, net, drawing, label, pin, ,etc.). Though, layer:purpose pairs may be inconsistent across foundries.
+
 ## Day 3 - Design Rule Checking
 
 ## Day 4 - Understanding PNR and Physical verification with openlane flow
