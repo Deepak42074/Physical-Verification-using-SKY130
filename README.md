@@ -86,7 +86,7 @@ make
 sudo make install
 ```
 
-The ```make``` process grabs the SKY130 repository and submodules, as well as a few third party repositories to use in the install. It then builds the libraries from these various repositories.
+The "make" process grabs the SKY130 repository and submodules, as well as a few third party repositories to use in the install. It then builds the libraries from these various repositories.
 
 The libraries supported by open_pdks are:
 - Digital standard cells (ex: sky130_fd_sc_hd)
@@ -96,6 +96,21 @@ The libraries supported by open_pdks are:
 sky130_ml_xx_hd : This contains set of layout for alphanumeric layout used for putting text on layout whihc can be seen under microscope.
 
 ## Day 2 - Design Rule Checks and Layout Vs Simulation
+
+### Fundamentals of Physical Verification
+
+The two primary aspects of physical verification are as follows:
+
+1. Design Rule Checks (DRC)
+ * This make sures that the design layout meets all the silicon foundry rules for mask making.
+2. Layout vs. Schematic (LVS)
+ * This makes sure that the design layout matches a simulatable netlist by  electrical connectivity and number of devices,pins. This matches the design layout to others forms that electrically matches the design and shows electrical description of circuits which is independent of layout.
+
+LVS is based on principle that if we have multiple version of something derived from independent sources then those version can be cross checked to find errors in each other. So the more the independent sources, the more robust result, although LVS uses only two sources:
+1. Checking From independent source
+* Extracted Layout is compared with schematic netlist or vice versa.
+2. Checking From Dependent sources
+In the modern practice of automation where chips are designed from a single source (RTL design), the LVS process is the matter of  checking the design through different flows; one starting at the RTL source and working forwards and the other starting at the finished layout and working backwards.
 
 ## Day 3 - Design Rule Checking
 
