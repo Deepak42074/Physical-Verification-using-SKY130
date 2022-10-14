@@ -105,3 +105,29 @@ extract all
 ext2spice lvs
 ext2spice
 ```
+### Running Netgen
+
+Netgen is an extension Tcl/Tk interpreter language, and as such, all netgen commands share Tcl/Tk syntax.
+
+The shell command for running netgen is shown below.
+
+```
+netgen -batch lvs "filename1 subcircuit1" "filename2 subcircuit2" setup_file output_file
+
+```
+### Lab - Introduction to LVS
+We need to first git clone the repo to obtain all files necessary for the this lab.
+```
+git clone https://github.com/RTimothyEdwards/vsd_lvs_lab.git
+```
+#### Lab5_1
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_5_LAB/LAB5_1.1.png)
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_5_LAB/LAB5_1.2.png)
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_5_LAB/LAB5_1.3.png)
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_5_LAB/LAB5_1.4.png)
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_5_LAB/LAB5_2.1.png)
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_5_LAB/LAB5_2.2.png)
+
+
+
+
