@@ -74,3 +74,11 @@ A cloud based virtual training workshop conducted by VSD-IAT for Physical-Verifi
 The SkyWater open PDK public repository and documentation link:
  - [Documentation](https://skywater-pdk.rtfd.io/) 
  - [PDK Library and files](https://github.com/google/skywater-pdk)
+
+## Day 2 - Design Rule Checks and Layout Vs Simulation
+
+## Day 3 - Design Rule Checking
+
+## Day 4 - Understanding PNR and Physical verification with openlane flow
+
+## Day 5 - Running Layout Vs. Schematic
