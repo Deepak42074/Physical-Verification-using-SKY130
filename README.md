@@ -1,7 +1,7 @@
 # Physical-Verification-using-SKY130
 A cloud based virtual training workshop conducted by VSD-IAT for Physical-Verification-using-SKY130.
 
-![](https://github.com/Deepak42074/Sky130-RTL-Design-And-Synthesis-Using-Verilog/blob/main/DAY_1/VSD_Workshop_Detail.png)
+![](https://github.com/Deepak42074/VSD_Physical_design.png)
 ## Table of Contents
 
   * [Day 1 - Introduction to SkyWater SKY130 and Open-Source EDA Tools](#day-1---introduction-to-skywater-sky130-and-open-source-eda-tools)
