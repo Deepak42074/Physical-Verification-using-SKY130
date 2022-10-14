@@ -82,3 +82,26 @@ The SkyWater open PDK public repository and documentation link:
 ## Day 4 - Understanding PNR and Physical verification with openlane flow
 
 ## Day 5 - Running LVS
+LVS and DRC are the main principle forms of sign-off validation before sending a chip for fabrication to the foundry. While the foundry will perform a full DRC on our design, they do not perform LVS, since the foundry has no way of knowing the behaviour/function of our design or what it is supposed to do. Even if our design does not meet LVS, it has the potential to come back from manufacturing just as dead as a chip that fails DRC.
+
+Mostly all LVS tool needs the schematic and layout netlists, and usually, netlists used for this purpose are in .spice format, though any format with gives enough information about the circuit will work just fine (lef/def, verilog, blif, etc). Netgen accepts spice and verilog formats, both of which can be simulated(spice file with ngspice and verilog file with iverilog).
+
+### LVS Netlists Vs Simulation Netlists differnce:
+
+|Netlist for LVS|Netlist for Simulation|
+|-|-|
+|Devices in design|Devices in design|
+|Basic parameters|All parameters|
+||Parasitic capacitors|
+||Parasitic resistors|
+|Nets in design|Nets rewired around parasitic resistors|
+||Parasitic Inductors|
+||Parasitic mutual inductance|
+
+Magic commands to extract netlists for LVS run, we use the following extraction commands.
+```
+extract do local
+extract all
+ext2spice lvs
+ext2spice
+```
