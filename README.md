@@ -47,7 +47,7 @@ A cloud based virtual training workshop conducted by VSD-IAT for Physical-Verifi
     + [Lab - Unimplemented Rules](#lab---unimplemented-rules)
     + [Lab - Latch-up and Antenna Rules](#lab---latch-up-and-antenna-rules)
     + [Lab - Density Rules](#lab---density-rules)
-  * [Day 5 - Running Layout Vs. Schematic](#day-5---running-layout-vs-schematic)
+  * [Day 5 - Running LVS](#day-5---running-lvs)
     + [Fundamentals of LVS](#fundamentals-of-lvs)
     + [Schematics and LVS Matching](#schematics-and-lvs-matching)
     + [LVS Netlists Vs. Simulation Netlists](#lvs-netlists-vs-simulation-netlists)
@@ -81,4 +81,4 @@ The SkyWater open PDK public repository and documentation link:
 
 ## Day 4 - Understanding PNR and Physical verification with openlane flow
 
-## Day 5 - Running Layout Vs. Schematic
+## Day 5 - Running LVS
