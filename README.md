@@ -71,6 +71,6 @@ A cloud based virtual training workshop conducted by VSD-IAT for Physical-Verifi
 ## Day 1 - Introduction to SkyWater SKY130 and Open-Source EDA Tools
 
 ### SkyWater PDK
-The SkyWater open PDK public repository are and documentation link:
+The SkyWater open PDK public repository and documentation link:
  - [Documentation](https://skywater-pdk.rtfd.io/) 
  - [PDK Library and files](https://github.com/google/skywater-pdk)
