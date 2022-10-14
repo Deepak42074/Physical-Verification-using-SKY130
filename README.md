@@ -75,6 +75,26 @@ The SkyWater open PDK public repository and documentation link:
  - [Documentation](https://skywater-pdk.rtfd.io/) 
  - [PDK Library and files](https://github.com/google/skywater-pdk)
 
+Steps to  install SKY130 PDKs:
+First clone the repository and for this run the following commands.
+
+```
+git clone https://github.com/RTimothyEdwards/open_pdks
+cd open_pdks
+configure --enable-sky130-pdk
+make
+sudo make install
+```
+
+The ```make``` process grabs the SKY130 repository and submodules, as well as a few third party repositories to use in the install. It then builds the libraries from these various repositories.
+
+The libraries supported by open_pdks are:
+- Digital standard cells (ex: sky130_fd_sc_hd)
+- Primitive devices/analog (ex: sky130_fd_pr)
+- I/O cells (ex: sky130_fd_io)
+- 3rd party libraries (ex: sky130_ml_xx_hd)
+sky130_ml_xx_hd : This contains set of layout for alphanumeric layout used for putting text on layout whihc can be seen under microscope.
+
 ## Day 2 - Design Rule Checks and Layout Vs Simulation
 
 ## Day 3 - Design Rule Checking
