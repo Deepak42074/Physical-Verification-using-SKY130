@@ -16,7 +16,7 @@ A cloud based virtual training workshop conducted by VSD-IAT for Physical-Verifi
     + [GDS Reading and Writing in Magic](#gds-reading-and-writing-in-magic)
     + [DRC Rules in Magic](#drc-rules-in-magic)
     + [LVS Setup for Netgen](#lvs-setup-for-netgen)
-    + [XOR Verification](#xor-verification)
+    + [Verification by XOR](#Verification-by-XOR)
     + [Lab - GDS read and Input Styles](#lab---gds-read-and-input-styles)
     + [Lab - Ports and Port Indexes](#lab---ports-and-port-indexes)
     + [Lab - Abstract Views](#lab---abstract-views)
@@ -244,13 +244,57 @@ gds merge true/false
 
 - Magic shows an interactive DRC.
 - Magic run drc engine as ideal process that runs when everything is idle .A ocess is computationally expensive, magic uses 3 styles for running DRC, namely:
-1. ```drc(full)``` - complete checks (slow)
-2. ```drc(fast)``` - typical checks (fast)
-3. ```drc(routing)``` - metal checks (fastest)
+   style drc variants (fast), (full), (routing)
+   
+   DRC styles in order of speed :
+   
+ ```drc(full)```      - complete  DRC check (slow)
+ ```drc(fast)```      - typical checks (fast)
+ ```drc(routing)```   - metal checks (fastest), check only metal layer/wire rules
 
-```drc off``` can be used to turn the DRC interactive engine off
-  
- 
+
+ ```drc off```          - can be used to turn the DRC interactive engine off
+
+- Main DRC rule checking methods:
+1. Edge-based rules       : It includes spacing, width, surround, extend rules
+2. Boolean geometry rules : It includes two dimensional logic operation(AND, XOR, GROW, SQUARES, etc.) on two different planes.
+
+
+### LVS Setup for Netgen
+
+- Netgen is a tool used for running LVS checks. 
+- The tool knows  nothing about layouts, it only knows about netlists and how to read and compare them.
+- The LVS tool must be able to figure out permutable pins of resistors, source and drain of transistors.
+- Netgen does not need to know anything about any components in the design, it juts needs to know whether there is  match in the layout and schematic netlist.
+- The technology setup file tells the LVS tool what all devide names are, how they should be combined in parallel, which pins of device are permutable, which properties are of interest for comparing between netlist and which are not.
+- If the hierarchy of layout netlist and schematic netlist does not match, LVS tool will not be able to match the circuits.
+
+Netgen commands used in th setup file are:
+1. `property`
+2. `ignore`
+3. `permute`
+4. `equate`
+
+* Layout Vs. Verilog
+ - We can run LVS on verilog output netlist of digital synthesis flow.LVS does comparison by gate, not by transistors. So from perspective of LVS all the logoc gates have been blackboxed.
+
+### Verification by XOR
+
+- In this boolean XOR operatot is used to compare teo layouts.
+- ON applying XOR operation on two mask layers, as per the rule the output is nothing where both mask share same geometry. We have some output on the layout where one mask has something and other has nothing.
+- It isused ot find out difference in the layouts, mask revision
+- We can use klayout to do mask level XOR verification
+
+![]()
+
+Magic command for running XOR operation: we can use the following commands.
+
+```
+load layout1_name
+flatten destination_name
+load layout2_name
+xor destination_name
+```
 
 ## Day 3 - Design Rule Checking
 
