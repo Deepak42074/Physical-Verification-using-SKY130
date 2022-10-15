@@ -287,8 +287,9 @@ Netgen commands used in th setup file are:
 
 ![]()
 
-Magic command for running XOR operation: we can use the following commands.
-
+Magic command for running XOR operation, we can use the following commands.
+let layout1 is : and2_2 and layout2 is : and2_2_alt
+Then for (and_2) XOR (and2_2_alt) = xor_test 
 ```
 load layout1_name
 flatten destination_name
