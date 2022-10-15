@@ -17,7 +17,7 @@ A cloud based virtual training workshop conducted by VSD-IAT for Physical-Verifi
     + [DRC Rules in Magic](#drc-rules-in-magic)
     + [LVS Setup for Netgen](#lvs-setup-for-netgen)
     + [Verification by XOR](#Verification-by-XOR)
-    + [Lab - GDS read and Input Styles](#lab---gds-read-and-input-styles)
+    + [Lab - GDS read](#lab---gds-read)
     + [Lab - Ports and Port Indexes](#lab---ports-and-port-indexes)
     + [Lab - Abstract Views](#lab---abstract-views)
     + [Lab - Basic Extraction](#lab---basic-extraction)
@@ -288,14 +288,31 @@ Netgen commands used in th setup file are:
 ![]()
 
 Magic command for running XOR operation, we can use the following commands.
-let layout1 is : and2_2 and layout2 is : and2_2_alt
-Then for (and_2) XOR (and2_2_alt) = xor_test 
+let layout1 is : and2_2 and layout2 is : and2_2_alt , destination : xor_test
+Then for (and2_2) XOR (and2_2_alt) = xor_test 
+
 ```
 load layout1_name
 flatten destination_name
 load layout2_name
 xor destination_name
 ```
+### Lab - GDS read 
+
+To check input style check below commands in tch=kon window:
+
+- To check input cif styles
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_2_LAB/LAB2_0.png)
+
+- GDS file read for input style sky130(vendor)
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_2_LAB/LAB2_1.png)
+
+- GDS file read for input style sky130() :
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_2_LAB/LAB2_2.png)
+
+- GDS read after making " gds duplicates true" :
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_2_LAB/LAB2_3.png)
+
 
 ## Day 3 - Design Rule Checking
 
