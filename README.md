@@ -145,6 +145,7 @@ The two primary aspects of physical verification are as follows:
 LVS is based on principle that if we have multiple version of something derived from independent sources then those version can be cross checked to find errors in each other. So the more the independent sources, the more robust result, although LVS uses only two sources:
 1. Checking From independent source
 * Extracted Layout is compared with schematic netlist or vice versa.
+
 2. Checking From Dependent sources
 In the modern practice of automation where chips are designed from a single source (RTL design), the LVS process is the matter of  checking the design through different flows; one starting at the RTL source and working forwards and the other starting at the finished layout and working backwards.
 
@@ -164,6 +165,7 @@ The GDSII format is preferred format for mask making. In magic the commands to g
 The chip layout file formats do not contain much metadata mud that includes any concept of netlist that corresponds to layout.The layout tool must be able to independently generate  the circuit netlist equivalent by looking at mask geometry of the layout. This process is known as extraction.
 
 - Extraction in magic :
+
  Layout -> Intermediate form -> Netlist
 
  .mag file -> .ext file -> spice file
