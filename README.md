@@ -52,13 +52,7 @@ A cloud based virtual training workshop conducted by VSD-IAT for Physical-Verifi
     + [Symmetry Breaking](#symmetry-breaking)
     + [Interpreting Netgen Results](#interpreting-netgen-results)
     + [Lab - Introduction to LVS](#lab---introduction-to-lvs)
-    + [Lab - LVS with Subcircuits](#lab---lvs-with-subcircuits)
-    + [Lab - LVS with Blackboxes Subcircuits](#lab---lvs-with-blackboxes-subcircuits)
-    + [Lab - LVS with SPICE Low Level Components](#lab---lvs-with-spice-low-level-components)
-    + [Lab - LVS For Power-On-Reset Circuit](#lab---lvs-for-power-on-reset-circuit)
-    + [Lab - Layout Vs. Verilog for Standard Cell](#lab---layout-vs-verilog-for-standard-cell)
-    + [Lab - LVS with Macros](#lab---lvs-with-macros)
-    + [Lab - LVS for Digital PLL Design](#lab---lvs-for-digital-pll-design)
+   
   * [Acknowledgements](#acknowledgements)
   * [References](#References )
 
