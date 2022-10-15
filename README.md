@@ -6,9 +6,8 @@ A cloud based virtual training workshop conducted by VSD-IAT for Physical-Verifi
 
   * [Day 1 - Introduction to SkyWater SKY130 and Open-Source EDA Tools](#day-1---introduction-to-skywater-sky130-and-open-source-eda-tools)
     + [SkyWater PDK](#skywater-pdk)
-    + [Open-Source EDA Tools](#open-source-eda-tools)
+    + [Tools supported by openpdks](#Tools-supported-by-openpdks)
     + [Physical Verification and Design Flows](#physical-verification-and-design-flows)
-    + [Lab - Checking Tool Installations](#lab---checking-tool-installations)
     + [Lab - Creating an Inverter Design](#lab---creating-an-inverter-design)
   * [Day 2 - Design Rule Checks and Layout Vs. Simulation](#day-2---design-rule-checks-and-layout-vs-simulation)
     + [Fundamentals of Physical Verification](#fundamentals-of-physical-verification)
@@ -75,7 +74,7 @@ The SkyWater open PDK public repository and documentation link:
  - [Documentation](https://skywater-pdk.rtfd.io/) 
  - [PDK Library and files](https://github.com/google/skywater-pdk)
 
-Steps to  install SKY130 PDKs:
+Steps to  install SKY130 PDKs and openpdk:
 First clone the repository and for this run the following commands.
 
 ```
@@ -88,6 +87,20 @@ sudo make install
 
 The "make" process grabs the SKY130 repository and submodules, as well as a few third party repositories to use in the install. It then builds the libraries from these various repositories.
 
+### Tools supported by openpdks
+
+Open_PDKs is a Makefile based installer that takes files from the SkyWater PDKs and reformats them for a number of open source EDA tools as listed below:
+- Magic
+- Klayout
+- Openlane
+- Xschem
+- Netgen
+- Ngspice
+- IVerilog
+- qflow
+- IRSIM
+- xcircuit
+
 The libraries supported by open_pdks are:
 - Digital standard cells (ex: sky130_fd_sc_hd)
 - Primitive devices/analog (ex: sky130_fd_pr)
@@ -95,7 +108,7 @@ The libraries supported by open_pdks are:
 - 3rd party libraries (ex: sky130_ml_xx_hd)
 sky130_ml_xx_hd : This contains set of layout for alphanumeric layout used for putting text on layout whihc can be seen under microscope.
 
-###LAB1
+### lab creating an inverter design
 #### Schematic Design and Simulation
 
 ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/Inverter_sch.png)
