@@ -8,6 +8,7 @@ A cloud based virtual training workshop conducted by VSD-IAT for Physical-Verifi
     + [SkyWater PDK](#skywater-pdk)
     + [Tools supported by openpdks](#Tools-supported-by-openpdks)
     + [Lab - Creating an Inverter Design](#lab---creating-an-inverter-design)
+    
   * [Day 2 - Design Rule Checks and Layout Vs. Simulation](#day-2---design-rule-checks-and-layout-vs-simulation)
     + [Fundamentals of Physical Verification](#fundamentals-of-physical-verification)
     + [Layout file formats and GDSII format](#Layout-file-formats-and-GDSII-format)
@@ -174,6 +175,82 @@ There is one ext file per cell in the design. The enumerates all electriced nets
 
 Netlist -> Simulator -> Data plot
 
+- Full R-C extraction command in magic
+```
+extract all
+extresist tolerance 10
+extresist all
+extspice lvs
+ext2spice cthresh 0
+ext2spice extresist on
+ext2spice
+
+```
+
+### GDS reading and writing in magic
+- To read a GDS file in magic use :
+```
+gds read file_name
+```
+- The other read commands for gds files are:
+```
+gds readonly true/false  
+gds flatglob expression  
+gds flatten true
+gds noduplicates true 
+```
+- GDS writing, input , output styles:
+1. GDS Writing:
+The gds write commands from layout are below:
+
+```
+gds write filename
+gds libraru true
+gds addendum true
+gds merge true/false
+
+```
+2. GDS input styles
+ Magic techfile "cifinput" section (for cif and gds)
+ - style sky130 variants (), (vendor)
+ - style rdl import 
+ 
+ Magic command:
+ ```
+ cif style sky130()
+ cif style sky130(vendor)
+ ```
+ 
+ 3. GDS output styles
+  Magic techfile "cifoutput" section (for cif and gds)
+  
+  Magic commands:
+  ```
+  style gdsii 
+  style drc
+  style density
+  style waffelfill
+  ```
+  - Openpdk scripts for using special cifoutput styles:
+  Location: sky130/custom/scripts
+  ```
+  style density     : check_density.py
+  style wafflefill  : generate_fill.py
+  ```
+  - GDS output issues:
+  Error : " Parent and child disagree on CIF "  : It occurs if ruls generate more shapes in a child cell alone than in the child + parent cell.
+  
+  ### DRC Rules in Magic
+
+- Magic shows an interactive DRC.
+- Magic run drc engine as ideal process that runs when everything is idle .A ocess is computationally expensive, magic uses 3 styles for running DRC, namely:
+1. ```drc(full)``` - complete checks (slow)
+2. ```drc(fast)``` - typical checks (fast)
+3. ```drc(routing)``` - metal checks (fastest)
+
+```drc off``` can be used to turn the DRC interactive engine off
+  
+ 
 
 ## Day 3 - Design Rule Checking
 
