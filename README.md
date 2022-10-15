@@ -389,6 +389,95 @@ These are rules that are device specific, and generally  need to be handled with
  
 ## Day 4 - Understanding PNR and Physical verification with openlane flow
 
+### Openlane Architecture
+ ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_4_LAB/Openlane%20architecture.png)
+ 
+- OpenLane Design Stages
+OpenLane flow consists of several stages. By default all flow steps are run in sequence. Each stage may consist of multiple sub-stages. OpenLane can also be run interactively as shown here.
+
+1. Synthesis
+
+yosys/abc - Perform RTL synthesis and technology mapping.
+
+OpenSTA - Performs static timing analysis on the resulting netlist to generate timing reports
+
+2. Floorplaning
+
+init_fp - Defines the core area for the macro as well as the rows (used for placement) and the tracks (used for routing)
+
+ioplacer - Places the macro input and output ports
+
+pdngen - Generates the power distribution network
+
+tapcell - Inserts welltap and decap cells in the floorplan
+
+3. Placement
+
+RePLace - Performs global placement
+
+Resizer - Performs optional optimizations on the design
+
+OpenDP - Perfroms detailed placement to legalize the globally placed components
+
+4. CTS
+
+TritonCTS - Synthesizes the clock distribution network (the clock tree)
+
+5. Routing
+
+FastRoute - Performs global routing to generate a guide file for the detailed router
+
+TritonRoute - Performs detailed routing
+
+OpenRCX - Performs SPEF extraction
+
+6. Tapeout
+
+Magic - Streams out the final GDSII layout file from the routed def
+
+KLayout - Streams out the final GDSII layout file from the routed def as a back-up
+
+7. Signoff
+
+Magic - Performs DRC Checks & Antenna Checks
+
+KLayout - Performs DRC Checks
+
+Netgen - Performs LVS Checks
+
+CVC - Performs Circuit Validity Checks
+
+*OpenLane integrated several key open source tools over the execution stages:
+
+  - RTL Synthesis, Technology Mapping, and Formal Verification : yosys + abc
+
+  - Static Timing Analysis: OpenSTA
+
+  - Floor Planning: init_fp, ioPlacer, pdn and tapcell
+
+  - Placement: RePLace (Global), Resizer and OpenPhySyn (formerly), and OpenDP (Detailed)
+
+  - Clock Tree Synthesis: TritonCTS
+
+  - Fill Insertion: OpenDP/filler_placement
+
+  - Routing: FastRoute or CU-GR (formerly) and TritonRoute (Detailed) or DR-CU
+
+  - SPEF Extraction: OpenRCX or SPEF-Extractor (formerly)
+
+  - GDSII Streaming out: Magic and KLayout
+
+  - DRC Checks: Magic and KLayout
+
+  - LVS check: Netgen
+
+  - Antenna Checks: Magic
+
+  - Circuit Validity Checker: CVC
+  
+- Openlane Output File strcuture:
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_4_LAB/Openlane_output.png)
+
 ## Day 5 - Running LVS
 LVS and DRC are the main principle forms of sign-off validation before sending a chip for fabrication to the foundry. While the foundry will perform a full DRC on our design, they do not perform LVS, since the foundry has no way of knowing the behaviour/function of our design or what it is supposed to do. Even if our design does not meet LVS, it has the potential to come back from manufacturing just as dead as a chip that fails DRC.
 
