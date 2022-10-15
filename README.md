@@ -95,6 +95,19 @@ The libraries supported by open_pdks are:
 - 3rd party libraries (ex: sky130_ml_xx_hd)
 sky130_ml_xx_hd : This contains set of layout for alphanumeric layout used for putting text on layout whihc can be seen under microscope.
 
+###LAB1
+#### Schematic Desing and Simulation
+
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/Inverter_sch.png)
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/Inverter_tb.png)
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/Schematic_simulation.png)
+
+#### Layout Desing by importing spice to magic and POstlayout simulation
+
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/spice2mag.png)
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/final_layout.png)
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/Post_layout_simulation.png)
+
 ## Day 2 - Design Rule Checks and Layout Vs Simulation
 
 ### Fundamentals of Physical Verification
