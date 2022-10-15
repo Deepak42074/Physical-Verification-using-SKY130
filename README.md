@@ -96,16 +96,23 @@ The libraries supported by open_pdks are:
 sky130_ml_xx_hd : This contains set of layout for alphanumeric layout used for putting text on layout whihc can be seen under microscope.
 
 ###LAB1
-#### Schematic Desing and Simulation
+#### Schematic Design and Simulation
 
 ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/Inverter_sch.png)
+
+- Inverter testbench
 ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/Inverter_tb.png)
+
+-Simulation Result
 ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/Schematic_simulation.png)
 
-#### Layout Desing by importing spice to magic and POstlayout simulation
-
+#### Layout Design and Postlayout simulation
+-Layout imported from spice file: file -> import spice
 ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/spice2mag.png)
+
+- Layout after connecting ds
 ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/final_layout.png)
+
 ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/Post_layout_simulation.png)
 
 ## Day 2 - Design Rule Checks and Layout Vs Simulation
