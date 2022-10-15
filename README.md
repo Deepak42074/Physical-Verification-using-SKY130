@@ -46,6 +46,10 @@ A cloud based virtual training workshop conducted by VSD-IAT for Physical-Verifi
     + [Lab - Unimplemented Rules](#lab---unimplemented-rules)
     + [Lab - Latch-up and Antenna Rules](#lab---latch-up-and-antenna-rules)
     + [Lab - Density Rules](#lab---density-rules)
+  * [Day 4 - Understanding PNR and Physical verification with openlane flow](#Day-4---Understanding-PNR-and-Physical-verification-with-openlane-flow)
+    + [Openlane Architecture](#Openlane-Architecture)
+    + [OpenLane integrated open source tools over the execution stages](#OpenLane-integrated-open-source-tools-over-the-execution-stages)
+    + [Openlane Output File strcuture](#Openlane-Output-File-strcuture)
   * [Day 5 - Running LVS](#day-5---running-lvs)
     + [Fundamentals of LVS](#fundamentals-of-lvs)
     + [Schematics and LVS Matching](#schematics-and-lvs-matching)
@@ -447,7 +451,7 @@ Netgen - Performs LVS Checks
 
 CVC - Performs Circuit Validity Checks
 
-*OpenLane integrated several key open source tools over the execution stages:
+### OpenLane integrated open source tools over the execution stages
 
   - RTL Synthesis, Technology Mapping, and Formal Verification : yosys + abc
 
@@ -475,7 +479,7 @@ CVC - Performs Circuit Validity Checks
 
   - Circuit Validity Checker: CVC
   
-- Openlane Output File strcuture:
+### Openlane Output File strcuture
 ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_4_LAB/Openlane_output.png)
 
 ## Day 5 - Running LVS
