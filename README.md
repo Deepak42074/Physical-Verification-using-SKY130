@@ -35,17 +35,7 @@ A cloud based virtual training workshop conducted by VSD-IAT for Physical-Verifi
     + [Miscellaneous Rules and Latch-up, Antenna and Stress Rules](#miscellaneous-rules-and-latch-up-antenna-and-stress-rules)
     + [Density Rules](#density-rules)
     + [Recommended, Manufacturing and ERC Rules](#recommended-manufacturing-and-erc-rules)
-    + [Lab - Width and Spacing Rules](#lab---width-and-spacing-rules)
-    + [Lab - Wide Spacing and Notch Rules](#lab---wide-spacing-and-notch-rules)
-    + [Lab - Contact Cuts (Via) and its DRC Errors](#lab---contact-cuts-via-and-its-drc-errors)
-    + [Lab - Minimum Area and Minimum Hole Rule](#lab---minimum-area-and-minimum-hole-rule)
-    + [Lab - Wells and Deep N-Wells](#lab---wells-and-deep-n-wells)
-    + [Lab - Derived Layers](#lab---derived-layers)
-    + [Lab - Parameterised and PDK Devices](#lab---parameterised-and-pdk-devices)
-    + [Lab - Angle And Overlap Rule](#lab---angle-and-overlap-rule)
-    + [Lab - Unimplemented Rules](#lab---unimplemented-rules)
-    + [Lab - Latch-up and Antenna Rules](#lab---latch-up-and-antenna-rules)
-    + [Lab - Density Rules](#lab---density-rules)
+    + [Lab](#Lab)   
   * [Day 4 - Understanding PNR and Physical verification with openlane flow](#Day-4---Understanding-PNR-and-Physical-verification-with-openlane-flow)
     + [Openlane Architecture](#Openlane-Architecture)
     + [OpenLane integrated open source tools over the execution stages](#OpenLane-integrated-open-source-tools-over-the-execution-stages)
@@ -70,6 +60,7 @@ A cloud based virtual training workshop conducted by VSD-IAT for Physical-Verifi
     + [Lab - LVS with Macros](#lab---lvs-with-macros)
     + [Lab - LVS for Digital PLL Design](#lab---lvs-for-digital-pll-design)
   * [Acknowledgements](#acknowledgements)
+  * [References](#References )
 
 ## Day 1 - Introduction to SkyWater SKY130 and Open-Source EDA Tools
 
@@ -388,8 +379,15 @@ These are rules that are device specific, and generally  need to be handled with
  - Latchup rule:
  ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/Latchuprule.png)
  
+ ### Lab
+ - Width rule
+ ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/lab_stretc_and_width_rule.png)
  
- 
+ - Contact cut
+  ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/lab_Contact_cut.png )
+  
+ - Minimum hole 
+  ![]( https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/lab_Minimum_holerule.png)
  
 ## Day 4 - Understanding PNR and Physical verification with openlane flow
 
@@ -530,5 +528,11 @@ git clone https://github.com/RTimothyEdwards/vsd_lvs_lab.git
 ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_5_LAB/LAB5_2.2.png)
 
 
+# Acknowledgements
 
+* Kunal Gosh, Co-Founder (VSD Corp. Pvt Ltd)
+* Tim Edwards, Efabless
+* Google
 
+# References 
+* https://openlane.readthedocs.io/en/latest/flow_overview.html
