@@ -327,6 +327,19 @@ To check port details : standard cell used : sky130_fd_sc_hd__and2_1
 - Port detials after reading spice file
   ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_2_LAB/LAB2_2.4.png)
   
+### Lab - Setup for XOR
+
+To conduct XOR verification on masks, we will checkby  loading and2_1 locally so that it can be edited.
+
+-Loading and2_1.mag and saving it locally 
+[](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_2_LAB/LAB2_XOR_1.png)
+
+- Loading altered and2_1 ,editing the layout and performing XOR operation
+[](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_2_LAB/LAB2_XOR_1.png)
+
+- Loading XOR operation output
+[](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_2_LAB/LAB2_XOR_1.png)
+
   
 ## Day 3 - Design Rule Checking
 
