@@ -359,8 +359,8 @@ Some of the foundry design rules for DRC clean layout are :
  
 2. Spacing rule :
  ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/Spacing_rule.png)
- 
-3. The Notch rule : 
+  
+3. The Notch rule :
   ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/Notchrule.png)
  
  ### Local Interconnect Rules:
@@ -374,9 +374,15 @@ These are rules that are device specific, and generally  need to be handled with
   ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/Frontendrules.png)
   
   ### Deeps N-Well and High Voltage Rules
-    ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/Deep_nwell.png)
+   ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/Deep_nwell.png)
   
-  
+ ### Miscellaneous Rules and Latch-up, Antenna and Stress Rules
+ 
+ - Antenna rule:
+ ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/Antennarule.png)
+ 
+ - Latchup rule:
+ ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/Latchuprule.png)
  
  
  
