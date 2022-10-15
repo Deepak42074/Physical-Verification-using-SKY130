@@ -344,6 +344,43 @@ To conduct XOR verification on masks, we will checkby  loading and2_1 locally so
   
 ## Day 3 - Design Rule Checking
 
+DRC checks do the physica; verification of mask data layout against foundry design rules.
+
+### Basics of silicon manufacturing process:
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/DRC2.png)
+
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/DRC1.png)
+
+### Back-end Metal Layer Rules
+Some of the foundry design rules for DRC clean layout are :
+
+1. The width rule :
+ ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/Width_Rule.png)
+ 
+2. Spacing rule :
+ ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/Spacing_rule.png)
+ 
+3. The Notch rule : 
+  ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/Notchrule.png)
+ 
+ ### Local Interconnect Rules:
+ The aspect ratio of any uncontacted local interconnect layer should generally be greater than 1:10.
+  ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/Local_interconnect.png)
+  
+ ### Front-end Rules
+ 
+These are rules that are device specific, and generally  need to be handled with care while designing standard cells or designing special layouts .
+
+  ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/Frontendrules.png)
+  
+  ### Deeps N-Well and High Voltage Rules
+    ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/Deep_nwell.png)
+  
+  
+ 
+ 
+ 
+ 
 ## Day 4 - Understanding PNR and Physical verification with openlane flow
 
 ## Day 5 - Running LVS
