@@ -524,8 +524,8 @@ git clone https://github.com/RTimothyEdwards/vsd_lvs_lab.git
 
 # Acknowledgements
 
-* Kunal Gosh, Co-Founder (VSD Corp. Pvt Ltd)
-* Tim Edwards, Efabless
+* Kunal Ghosh, Co-Founder (VSD Corp. Pvt Ltd)
+* Tim Edwards, Efabless 
 * Google
 
 # References 
