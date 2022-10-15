@@ -335,10 +335,10 @@ To conduct XOR verification on masks, we will checkby  loading and2_1 locally so
 ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_2_LAB/LAB2_XOR_1.png)
 
 - Loading altered and2_1 ,editing the layout and performing XOR operation
-![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_2_LAB/LAB2_XOR_2.png)
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_2_LAB/LAB_XOR_2.png)
 
 - Loading XOR operation output
-![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_2_LAB/LAB2_XOR_3.png)
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_2_LAB/LAB_XOR_3.png)
 
 
   
