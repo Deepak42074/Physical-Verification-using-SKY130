@@ -7,12 +7,11 @@ A cloud based virtual training workshop conducted by VSD-IAT for Physical-Verifi
   * [Day 1 - Introduction to SkyWater SKY130 and Open-Source EDA Tools](#day-1---introduction-to-skywater-sky130-and-open-source-eda-tools)
     + [SkyWater PDK](#skywater-pdk)
     + [Tools supported by openpdks](#Tools-supported-by-openpdks)
-    + [Physical Verification and Design Flows](#physical-verification-and-design-flows)
     + [Lab - Creating an Inverter Design](#lab---creating-an-inverter-design)
   * [Day 2 - Design Rule Checks and Layout Vs. Simulation](#day-2---design-rule-checks-and-layout-vs-simulation)
     + [Fundamentals of Physical Verification](#fundamentals-of-physical-verification)
-    + [Data Formats and GDSII](#data-formats-and-gdsii)
-    + [Extraction Styles and Options in Magic](#extraction-styles-and-options-in-magic)
+    + [Layout file formats and GDSII format](#Layout-file-formats-and-GDSII-format)
+    + [Extraction commands Styles and Options in Magic](#extraction-commands-styles-and-options-in-magic)
     + [GDS Reading and Writing in Magic](#gds-reading-and-writing-in-magic)
     + [DRC Rules in Magic](#drc-rules-in-magic)
     + [LVS Setup for Netgen](#lvs-setup-for-netgen)
@@ -116,16 +115,20 @@ sky130_ml_xx_hd : This contains set of layout for alphanumeric layout used for p
 - Inverter testbench
 ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/Inverter_tb.png)
 
--Simulation Result
+- Inverter testbench spice file:
+![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/inverter_tb_spice.png)
+
+- Simulation Result
 ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/Schematic_simulation.png)
 
 #### Layout Design and Postlayout simulation
--Layout imported from spice file: file -> import spice
+- Layout imported from spice file: file -> import spice
 ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/spice2mag.png)
 
-- Layout after connecting ds
+- Layout after connecting pins
 ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/final_layout.png)
 
+- Postlayout simulation result
 ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_1_LAB/Post_layout_simulation.png)
 
 ## Day 2 - Design Rule Checks and Layout Vs Simulation
@@ -145,7 +148,7 @@ LVS is based on principle that if we have multiple version of something derived 
 2. Checking From Dependent sources
 In the modern practice of automation where chips are designed from a single source (RTL design), the LVS process is the matter of  checking the design through different flows; one starting at the RTL source and working forwards and the other starting at the finished layout and working backwards.
 
- The GDSII format :
+### Layout file formats and GDSII format :
 
 Layout file formats are:
 These formats must describe both data (rectangles, subcells, polygons) and metadata (labels, cell boundaries and instance names, etc.) regarding IC layouts. 
@@ -155,6 +158,20 @@ These formats must describe both data (rectangles, subcells, polygons) and metad
 3. Open Artwork System Interchange Standard (OASIS) : It is supposed to form much smalle file than GDS.
 
 The GDSII format is preferred format for mask making. In magic the commands to generate mask data include a mixture of cif and calma. The Layer:purpose pairs distinguishes GDS from other formats. Instead of describing each layer with a name such as DIFF for diffusion, it describes them as a pair of numbers, seperated by a colon (ex. 65:20). Here, one number denotes the layer (such as diffusion, metal1, poly), while the other number denotes the purpose (such as blockage, net, drawing, label, pin, ,etc.). Though, layer:purpose pairs may be inconsistent across foundries.
+
+### Extraction commands Styles and Options in Magic:
+
+The chip layout file formats do not contain much metadata mud that includes any concept of netlist that corresponds to layout.The layout tool must be able to independently generate  the circuit netlist equivalent by looking at mask geometry of the layout. This process is known as extraction.
+
+- Extraction in magic :
+ Layout -> Intermediate form -> Netlist
+
+ .mag file -> .ext file -> spice file
+
+There is one ext file per cell in the design. The enumerates all electriced nets in the layout, all the devices (transistors, capacitors, resistors) and all instances of cell, ext file. all connection from cell down to subrell, parasities cap. blw nets.
+
+Netlist -> Simulator -> Data plot
+
 
 ## Day 3 - Design Rule Checking
 
