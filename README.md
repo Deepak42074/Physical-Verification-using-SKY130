@@ -18,7 +18,7 @@ A cloud based virtual training workshop conducted by VSD-IAT for Physical-Verifi
     + [LVS Setup for Netgen](#lvs-setup-for-netgen)
     + [Verification by XOR](#Verification-by-XOR)
     + [Lab - GDS read](#lab---gds-read)
-    + [Lab - Ports and Port Indexes](#lab---ports-and-port-indexes)
+    + [Lab - Ports](#lab---ports)
     + [Lab - Abstract Views](#lab---abstract-views)
     + [Lab - Basic Extraction](#lab---basic-extraction)
     + [lab - Setup for DRC](#lab---setup-for-drc)
@@ -313,7 +313,21 @@ To check input style check below commands in tch=kon window:
 - GDS read after making " gds duplicates true" :
 ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_2_LAB/LAB2_3.png)
 
+### Lab - Ports
+To check port details : standard cell used : sky130_fd_sc_hd__and2_1
+- Select port and the check index
+ ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_2_LAB/LAB2_2.1.png)
 
+- Port details
+ ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_2_LAB/LAB2_2.2.png)
+ 
+- Port detials after reading LEF file
+ ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_2_LAB/LAB2_2.3.png)
+ 
+- Port detials after reading spice file
+  ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY_2_LAB/LAB2_2.4.png)
+  
+  
 ## Day 3 - Design Rule Checking
 
 ## Day 4 - Understanding PNR and Physical verification with openlane flow
