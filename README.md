@@ -375,12 +375,15 @@ These are rules that are device specific, and generally  need to be handled with
  
  ### Lab
  - Width rule
+ 
  ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/lab_stretc_and_width_rule.png)
  
  - Contact cut
+ 
   ![](https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/lab_Contact_cut.png )
   
  - Minimum hole 
+ 
   ![]( https://github.com/Deepak42074/Physical-Verification-using-SKY130/blob/main/DAY3_LAB/lab_Minimum_holerule.png)
  
 ## Day 4 - Understanding PNR and Physical verification with openlane flow
